@@ -1,0 +1,86 @@
+---
+export interface Props {
+  body?: string;
+  href: string;
+  icon?: string;
+  title: string;
+}
+
+const { body, href, icon, title } = Astro.props;
+---
+
+<li class="link-card">
+  <a href={href} target="_blank">
+    <div class="link-title">
+      {icon && (
+        <img class="icon" src={icon} alt={title} />
+      )}
+      <h2>
+        {title}
+      </h2>
+    </div>
+    {body && (
+      <p>
+      {body}
+      </p>
+    )}
+  </a>
+</li>
+
+<style>
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 0.25rem;
+    background-color: white;
+    background-image: none;
+    background-size: 400%;
+    border-radius: 0.6rem;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1ch;
+  }
+
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: 1rem 1.3rem;
+    border-radius: 0.35rem;
+    color: #111;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+  .link-title {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    color: #444;
+  }
+
+  .icon {
+    max-width: 32px;
+    margin-right: 2ch;
+  }
+
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent));
+  }
+</style>

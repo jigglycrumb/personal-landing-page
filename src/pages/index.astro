@@ -1,76 +1,27 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/Link.astro';
+import Blurb from '../components/Blurb.astro'
+
+import config from '../../site.config'
+const  { title, content } = config
 ---
 
-<Layout title="jigglycrumb.space">
+<Layout title={title}>
   <main>
-    <h1 class="text-gradient">jigglycrumb.space</h1>
-    <p class="whoami">
-      <strong class="text-gradient">Hello, traveller!</strong><br />
-      I'm jigglycrumb. Welcome to my hideout!
-    </p>
+    <h1 class="text-gradient">{title}</h1>
+    <Blurb />
 
-    <h2 class="text-gradient">Where to find me</h2>
-    <ul role="list" class="link-list">
-      <Link title="Github" icon="/github.svg" href="https://github.com/jigglycrumb" />
-      <Link title="Redbubble" icon="/redbubble.svg" href="https://bubblepleb.redbubble.com" />
-      <Link title="Nostr" icon="/nostr.svg" href="https://nosta.me/416ca193aa5448b8cca1f09642807765cc0ee299609f972df0614cfb8ea2f2b1" />
-    </ul>
-
-    <h2 class="text-gradient">My websites</h2>
-    <ul role="list" class="link-list">
-      <Link
-        title="nostr.industries"
-        href="https://nostr.industries"
-        body="Free NIP-05 handles for nostr"
-      />
-
-      <Link
-        title="bitcoin-lexikon.org"
-        href="http://bitcoin-lexikon.org"
-        body="Das kleine Bitcoin Lexikon"
-      />
-
-      <Link
-        title="sleekspriter.app"
-        href="https://sleekspriter.app"
-        body="Pixel art editor"
-      />
-
-      <Link
-        title="asciimoji.com"
-        href="https://asciimoji.com"
-        body="ASCII emoticons for Mac OS/iOS and more"
-      />
-    </ul>
-
-    <h2 class="text-gradient">Side projects</h2>
-    <ul role="list" class="link-list">
-      <Link
-        title="splash-ds"
-        href="https://jigglycrumb.github.io/splash-ds/"
-        body="Boot splash creator for Nintendo 3DS"
-      />
-
-      <Link
-        title="TvTool"
-        href="https://jigglycrumb.github.io/tvtool/"
-        body="Tool for formatting TV show episode names"
-      />
-
-      <Link
-        title="Space Bacon"
-        href="https://jigglycrumb.github.io/space-bacon/"
-        body="Tiny game featuring my cat"
-      />
-
-      <Link
-        title="What would a pirate do?"
-        href="https://jigglycrumb.github.io/what-would-a-pirate-do/"
-        body="Decision making tool for pirates"
-      />
-    </ul>
+    {content.map(({ headline, links }) => {
+      return (
+        <h2 class="text-gradient">{headline}</h2>
+        <ul role="list" class="link-list">
+          {links.map(props => {
+            return <Link {...props} />
+          })}
+        </ul>
+      )
+    })}
   </main>
 </Layout>
 
@@ -86,23 +37,6 @@ import Link from '../components/Link.astro';
     font-weight: 800;
     margin: 0 0 2rem 0;
     text-align: center;
-  }
-
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-
-  .whoami {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
   }
 
   .link-list {

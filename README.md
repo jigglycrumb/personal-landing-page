@@ -1,4 +1,4 @@
-# link-page
+# landing-page
 
 Simple landing page similar to linktr.ee
 

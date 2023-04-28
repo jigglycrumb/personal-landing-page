@@ -1,4 +1,12 @@
+# link-page
+
 Simple landing page similar to linktr.ee
 
-Edit `/site.config.js` and `/src/components/Blurb.astro` to customize
+### Customization
+
+Edit `/site.config.js` and `/src/components/Blurb.astro`.  
 Icons have to be added to `/public`.
+
+### Deploy
+
+Deploys to Github pages by default.

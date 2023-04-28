@@ -10,3 +10,7 @@ Icons have to be added to `/public`.
 ### Deploy
 
 Deploys to Github pages by default.
+
+---
+
+Built with [Astro](https://astro.build)

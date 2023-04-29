@@ -17,6 +17,8 @@ Icons have to be added to `/public`.
 This project deploys to Github pages by default.  
 Just enable it in the repository settings.
 
+Edit `CNAME` to fit your domain name if you want to use one.
+
 ---
 
 Built with [Astro](https://astro.build)

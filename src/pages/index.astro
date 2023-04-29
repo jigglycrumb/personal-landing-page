@@ -1,7 +1,8 @@
 ---
+import Blurb from '../components/Blurb.astro'
+import DarkModeToggle from '../components/DarkModeToggle.astro';
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/Link.astro';
-import Blurb from '../components/Blurb.astro'
 
 import config from '../../site.config'
 const  { title, content } = config
@@ -9,6 +10,9 @@ const  { title, content } = config
 
 <Layout title={title}>
   <main>
+    <div class="dark-mode-toggle-container">
+      <DarkModeToggle />
+    </div>
     <h1 class="text-gradient">{title}</h1>
     <Blurb />
 
@@ -37,6 +41,12 @@ const  { title, content } = config
     font-weight: 800;
     margin: 0 0 2rem 0;
     text-align: center;
+  }
+
+  .dark-mode-toggle-container {
+    display: flex;
+    height: 28px;
+    justify-content: flex-end;
   }
 
   .link-list {

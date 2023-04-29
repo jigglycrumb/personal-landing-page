@@ -1,0 +1,27 @@
+body.dark-mode {
+  background-color: #111111;
+  color: #bbbbbb;
+
+  & .dark-mode-toggle label {
+    background-color: #333333;
+  }
+
+  & .blurb {
+    background-color: #333333;
+  }
+
+  & .link-card {
+    background-color: #444444;
+
+    & a {
+      background-color: #333333;
+    }
+    & p {
+      color: #bbbbbb;
+    }
+  }
+
+  & .link-title {
+    color: #dddddd;
+  }
+}

@@ -24,14 +24,13 @@
     const isDarkMode = !event?.target?.checked ?? true
     localStorage.setItem('darkMode', isDarkMode)
 
-    console.log('toggle', isDarkMode)
-
     // update body class
     updateBody(isDarkMode)
   })
 
   // initially check checkbox
-  const isDarkMode = localStorage.getItem('darkMode') === "true" || false
+  const userPrefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches;
+  const isDarkMode = localStorage.getItem('darkMode') === "true" || userPrefersDarkMode
   toggle.checked = !isDarkMode
 
   // initiall update body
@@ -42,7 +41,7 @@
   :root {
     --light: #fbe377;
     --background: #ffffff;
-    --moon-grey: #9c9c9c;
+    --moon-grey: #717171;
   }
 
   .dark-mode-toggle {
@@ -86,13 +85,13 @@
     background-color: var(--moon-grey);
     transition: 0.3s;
 
-    /* content: "´ω`"; */
+    /* content: "´ω`";
     justify-content: center;
     color: #303030;
     font-size: 35px;
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: bold; */
   }
 
   input:checked ~ .slider::before {
@@ -100,11 +99,11 @@
     background-color: var(--light);
     box-shadow: none;
 
-    /* content: "°◡°"; */
+    /* content: "°◡°"; 
     justify-content: center;
     font-size: 35px;
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: bold; */
   }
 </style>

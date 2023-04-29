@@ -1,15 +1,21 @@
-# landing-page
+# personal-landing-page
 
-Simple landing page similar to linktr.ee
+Simple landing page similar to linktr.ee  
+Includes a dark mode with automatic detection
+
+### Installation
+
+Fork this repository
 
 ### Customization
 
 Edit `/site.config.js` and `/src/components/Blurb.astro`.  
 Icons have to be added to `/public`.
 
-### Deploy
+### Deployment
 
-Deploys to Github pages by default.
+This project deploys to Github pages by default.  
+Just enable it in the repository settings.
 
 ---
 

@@ -1,5 +1,5 @@
 export default {
-  title: "jigglycrumb.space",
+  title: "✨ jigglycrumb.space ✨",
   content: [
     {
       headline: "Where to find me",

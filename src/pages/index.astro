@@ -1,7 +1,8 @@
 ---
+import Blurb from '../components/Blurb.astro'
+import DarkModeToggle from '../components/DarkModeToggle.astro';
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/Link.astro';
-import Blurb from '../components/Blurb.astro'
 
 import config from '../../site.config'
 const  { title, content } = config
@@ -9,6 +10,9 @@ const  { title, content } = config
 
 <Layout title={title}>
   <main>
+    <div class="dark-mode-toggle-container">
+      <DarkModeToggle />
+    </div>
     <h1 class="text-gradient">{title}</h1>
     <Blurb />
 
@@ -23,6 +27,11 @@ const  { title, content } = config
       )
     })}
   </main>
+  <footer>
+    <div>
+      Your own site like this? Visit the <a class="text-gradient" href="https://github.com/jigglycrumb/personal-landing-page" target="_blank">Github repository</a> 
+    </div>
+  </footer>
 </Layout>
 
 <style>
@@ -37,6 +46,26 @@ const  { title, content } = config
     font-weight: 800;
     margin: 0 0 2rem 0;
     text-align: center;
+  }
+
+  footer {
+    border-top: 1px solid rgb(var(--accent));
+    display: block;
+    margin: 3rem auto 0 auto;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 60ch;
+  }
+
+  footer div {
+    font-size: 70%;
+  }
+
+  .dark-mode-toggle-container {
+    display: flex;
+    height: 28px;
+    justify-content: flex-end;
   }
 
   .link-list {

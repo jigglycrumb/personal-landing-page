@@ -25,8 +25,8 @@ export default {
       headline: "My websites",
       links: [
         {
-          title: "nostr.industries",
-          href: "https://nostr.industries",
+          title: "zaps.lol",
+          href: "https://zaps.lol",
           body: "Free nostr address provider",
         },
         {

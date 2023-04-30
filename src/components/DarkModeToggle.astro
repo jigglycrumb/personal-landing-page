@@ -46,18 +46,17 @@
 
   .dark-mode-toggle {
     position: relative;
-    width: 200px;
-    zoom: 0.25;
+    width: 50px;
   }
 
   label {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 25px;
     background-color: var(--background);
-    border-radius: 50px;
+    border-radius: 13px;
     cursor: pointer;
-    border: 4px solid rgba(var(--accent), 25%);
+    border: 1px solid rgba(var(--accent), 25%);
   }
 
   input {
@@ -69,19 +68,19 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 13px;
     transition: 0.3s;
   }
 
   .slider::before {
     content: "";
     position: absolute;
-    top: 13px;
-    left: 16px;
-    width: 75px;
-    height: 75px;
+    top: 3px;
+    left: 4px;
+    width: 19px;
+    height: 19px;
     border-radius: 50%;
-    box-shadow: inset 18px -4px 0px 0px var(--light);
+    box-shadow: inset 4px -1px 0px 0px var(--light);
     background-color: var(--moon-grey);
     transition: 0.3s;
 
@@ -95,7 +94,7 @@
   }
 
   input:checked ~ .slider::before {
-    transform: translateX(95px);
+    transform: translateX(23px);
     background-color: var(--light);
     box-shadow: none;
 

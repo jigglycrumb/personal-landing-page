@@ -5,7 +5,7 @@ Includes a dark mode with automatic detection
 
 ### Installation
 
-Fork this repository
+- Fork this repository
 
 ### Customization
 

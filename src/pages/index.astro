@@ -1,11 +1,11 @@
 ---
-import Blurb from '../components/Blurb.astro'
-import DarkModeToggle from '../components/DarkModeToggle.astro';
-import Layout from '../layouts/Layout.astro';
-import Link from '../components/Link.astro';
+import Blurb from "../components/Blurb.astro";
+import DarkModeToggle from "../components/DarkModeToggle.astro";
+import Layout from "../layouts/Layout.astro";
+import Link from "../components/Link.astro";
 
-import config from '../../site.config'
-const  { title, content } = config
+import config from "../../site.config";
+const { title, content } = config;
 ---
 
 <Layout title={title}>
@@ -13,23 +13,35 @@ const  { title, content } = config
     <div class="dark-mode-toggle-container">
       <DarkModeToggle />
     </div>
-    <h1 class="text-gradient">{title}</h1>
+    <h1 class="text-gradient">
+      <span class="emoji">✨</span>
+      {title}
+      <span class="emoji">✨</span>
+    </h1>
     <Blurb />
 
-    {content.map(({ headline, links }) => {
-      return (
-        <h2 class="text-gradient">{headline}</h2>
-        <ul role="list" class="link-list">
-          {links.map(props => {
-            return <Link {...props} />
-          })}
-        </ul>
-      )
-    })}
+    {
+      content.map(({ headline, links }) => {
+        return (
+          <>
+            <h2 class="text-gradient">{headline}</h2>
+            <ul role="list" class="link-list">
+              {links.map(props => {
+                return <Link {...props} />;
+              })}
+            </ul>
+          </>
+        );
+      })
+    }
   </main>
   <footer>
     <div>
-      Your own site like this? Visit the <a class="text-gradient" href="https://github.com/jigglycrumb/personal-landing-page" target="_blank">Github repository</a> 
+      Your own site like this? Visit the <a
+        class="text-gradient"
+        href="https://github.com/jigglycrumb/personal-landing-page"
+        target="_blank">Github repository</a
+      >
     </div>
   </footer>
 </Layout>
@@ -66,9 +78,14 @@ const  { title, content } = config
     display: flex;
     height: 28px;
     justify-content: flex-end;
+    margin-bottom: 2rem;
   }
 
   .link-list {
     padding: 0;
+  }
+
+  .emoji {
+    font-weight: normal;
   }
 </style>

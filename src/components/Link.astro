@@ -11,19 +11,19 @@ const { body, href, icon, title } = Astro.props;
 
 <li class="link-card">
   <a href={href} target="_blank">
+    {
+      icon && (
+        <div class="icon-container">
+          <img class="icon" src={icon} alt={title} />
+        </div>
+      )
+    }
     <div class="link-title">
-      {icon && (
-        <img class="icon" src={icon} alt={title} />
-      )}
       <h2>
         {title}
       </h2>
+      {body && <p>{body}</p>}
     </div>
-    {body && (
-      <p>
-      {body}
-      </p>
-    )}
   </a>
 </li>
 
@@ -38,7 +38,8 @@ const { body, href, icon, title } = Astro.props;
     border-radius: 0.6rem;
     background-position: 100%;
     transition: background-position 0ms cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
     margin-bottom: 1ch;
   }
 
@@ -55,7 +56,8 @@ const { body, href, icon, title } = Astro.props;
 
   .link-title {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   h2 {
@@ -70,9 +72,17 @@ const { body, href, icon, title } = Astro.props;
     color: #444;
   }
 
-  .icon {
-    max-width: 32px;
+  .icon-container {
     margin-right: 2ch;
+    float: left;
+    height: 100%;
+    align-content: center;
+    display: grid;
+  }
+
+  .icon {
+    height: 32px;
+    width: 32px;
   }
 
   .link-card:is(:hover, :focus-within) {

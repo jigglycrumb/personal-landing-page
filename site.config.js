@@ -27,21 +27,25 @@ export default {
         {
           title: "zaps.lol",
           href: "https://zaps.lol",
+          icon: "/pages/zaps-lol.png",
           body: "Free nostr address provider",
         },
         {
           title: "bitcoin-lexikon.org",
           href: "http://bitcoin-lexikon.org",
+          icon: "/bitcoin.svg",
           body: "Das kleine Bitcoin Lexikon",
         },
         {
           title: "sleekspriter.app",
           href: "https://sleekspriter.app",
+          icon: "/pages/sleekspriter-app.png",
           body: "Pixel art editor",
         },
         {
           title: "asciimoji.com",
           href: "https://asciimoji.com",
+          icon: "/pages/asciimoji-com.png",
           body: "ASCII emoticons for Mac OS/iOS and more",
         },
       ],

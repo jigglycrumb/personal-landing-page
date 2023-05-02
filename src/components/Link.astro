@@ -3,18 +3,20 @@ export interface Props {
   body?: string;
   href: string;
   icon?: string;
+  emoji?: string;
   title: string;
 }
 
-const { body, href, icon, title } = Astro.props;
+const { body, emoji, href, icon, title } = Astro.props;
 ---
 
 <li class="link-card">
   <a href={href} target="_blank">
     {
-      icon && (
+      (icon || emoji) && (
         <div class="icon-container">
-          <img class="icon" src={icon} alt={title} />
+          {icon && <img class="icon" src={icon} alt={title} />}
+          {emoji && <span class="emoji">{emoji}</span>}
         </div>
       )
     }
@@ -83,6 +85,10 @@ const { body, href, icon, title } = Astro.props;
   .icon {
     height: 32px;
     width: 32px;
+  }
+
+  .emoji {
+    font-size: 200%;
   }
 
   .link-card:is(:hover, :focus-within) {

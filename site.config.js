@@ -56,21 +56,25 @@ export default {
         {
           title: "splash-ds",
           href: "https://jigglycrumb.github.io/splash-ds/",
+          emoji: "💦",
           body: "Boot splash creator for Nintendo 3DS",
         },
         {
           title: "TvTool",
           href: "https://jigglycrumb.github.io/tvtool/",
+          emoji: "📺",
           body: "Tool for formatting TV show episode names",
         },
         {
           title: "Space Bacon",
           href: "https://jigglycrumb.github.io/space-bacon/",
+          emoji: "🥓",
           body: "Tiny game featuring my cat",
         },
         {
           title: "What would a pirate do?",
           href: "https://jigglycrumb.github.io/what-would-a-pirate-do/",
+          emoji: "🏴‍☠️",
           body: "Decision making tool for pirates",
         },
       ],

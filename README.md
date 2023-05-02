@@ -11,12 +11,12 @@ Includes a dark mode with automatic detection
 
 - `/src/components/Headline.astro` is the site headline
 - `/src/components/Blurb.astro` is your bio/welcome text
-- `/site.config.js` contains your site title and link collection.
+- `/site.config.js` contains the browser tab title and link collection.
 
-  Your site content is an array of objects:
+  Your link collection is an array of objects:
 
   ```
-  [{
+  content: [{
     headline: "My websites",
     links: [
       {

@@ -13,11 +13,7 @@ const { title, content } = config;
     <div class="dark-mode-toggle-container">
       <DarkModeToggle />
     </div>
-    <h1 class="text-gradient">
-      <span class="emoji">✨</span>
-      {title}
-      <span class="emoji">✨</span>
-    </h1>
+    <h1 class="text-gradient">{title}</h1>
     <Blurb />
 
     {
@@ -83,9 +79,5 @@ const { title, content } = config;
 
   .link-list {
     padding: 0;
-  }
-
-  .emoji {
-    font-weight: normal;
   }
 </style>

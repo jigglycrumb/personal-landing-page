@@ -1,5 +1,5 @@
 export default {
-  title: "✨ jigglycrumb.space ✨",
+  title: "jigglycrumb.space", // browser tab title & header
   content: [
     {
       headline: "Where to find me",

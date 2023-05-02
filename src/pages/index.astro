@@ -2,6 +2,7 @@
 import Blurb from "../components/Blurb.astro";
 import DarkModeToggle from "../components/DarkModeToggle.astro";
 import Layout from "../layouts/Layout.astro";
+import Headline from "../components/Headline.astro";
 import Link from "../components/Link.astro";
 
 import config from "../../site.config";
@@ -13,7 +14,7 @@ const { title, content } = config;
     <div class="dark-mode-toggle-container">
       <DarkModeToggle />
     </div>
-    <h1 class="text-gradient">{title}</h1>
+    <Headline title={title} />
     <Blurb />
 
     {
@@ -47,13 +48,6 @@ const { title, content } = config;
     margin: auto;
     padding: 1.5rem;
     max-width: 60ch;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin: 0 0 2rem 0;
-    text-align: center;
   }
 
   footer {

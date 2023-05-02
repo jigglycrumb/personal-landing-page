@@ -9,7 +9,10 @@ Fork this repository
 
 ### Customization
 
-Edit `/site.config.js` and `/src/components/Blurb.astro`.  
+- `/site.config.js` contains your site title and link collection
+- `/src/components/Headline.astro` contains the site headline
+- `/src/components/Blurb.astro` is your bio/welcome text
+
 Icons have to be added to `/public`.
 
 ### Deployment

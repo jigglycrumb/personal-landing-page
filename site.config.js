@@ -10,14 +10,14 @@ export default {
           href: "https://github.com/jigglycrumb",
         },
         {
-          title: "Redbubble",
-          icon: "/redbubble.svg",
-          href: "https://bubblepleb.redbubble.com",
-        },
-        {
           title: "Nostr",
           icon: "/nostr.svg",
           href: "https://nosta.me/416ca193aa5448b8cca1f09642807765cc0ee299609f972df0614cfb8ea2f2b1",
+        },
+        {
+          title: "Redbubble",
+          icon: "/redbubble.svg",
+          href: "https://bubblepleb.redbubble.com",
         },
       ],
     },

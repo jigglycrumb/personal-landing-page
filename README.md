@@ -3,6 +3,12 @@
 Simple landing page similar to linktr.ee  
 Includes a dark mode with automatic detection
 
+# NOTE
+
+This repository moved to Codeberg.
+
+New repo: https://codeberg.org/jiggly/personal-landing-page
+
 ### Installation
 
 - Fork this repository
